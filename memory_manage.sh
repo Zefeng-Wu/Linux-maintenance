@@ -28,3 +28,17 @@ mail -s "Linux sever memory warnings " 835102330 @qq.com < /var/log/mem_detect.l
 
 fi
 fi 
+
+
+## 配置过程
+
+1、安装 s-nail 包：
+sudo apt install s-nail
+ 
+2、编辑 /etc/s-nail.rc 配置文件，在末尾添加：
+
+set from="账号@qq.com"
+set smtp="smtps://smtp.qq.com:465"
+set smtp-auth-user="账号@qq.com"
+set smtp-auth-password="授权码"
+set smtp-auth=login
